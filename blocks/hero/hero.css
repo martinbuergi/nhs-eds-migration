@@ -9,11 +9,8 @@
   min-height: 300px;
 }
 
-.hero h1 {
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  color: var(--background-color);
+.hero > div {
+  position: relative;
 }
 
 .hero picture {
@@ -30,8 +27,42 @@
   height: 100%;
 }
 
+/* NHS-style contained text box: sized to content, left-aligned, solid blue background */
+.hero > div > div:last-child {
+  box-sizing: border-box;
+  max-width: 500px;
+  padding: 24px;
+  background-color: #005eb8;
+  color: white;
+}
+
+.hero h1 {
+  max-width: none;
+  margin: 0 0 8px;
+  color: white;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.hero p {
+  margin: 0;
+  color: white;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
 @media (width >= 900px) {
   .hero {
     padding: 40px 32px;
+  }
+
+  .hero h1 {
+    font-size: 22px;
+  }
+
+  .hero p {
+    font-size: 36px;
   }
 }
