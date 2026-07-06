@@ -323,3 +323,83 @@ main .section.highlight {
   margin: 0;
   padding: 40px 0;
 }
+/* NHS section background alternation (matches source site's light-grey/white banding) */
+main > .section:nth-child(3),
+main > .section:nth-child(5) {
+  background-color: #f0f4f5;
+  padding: 40px 0;
+}
+
+/* Manage your health: default-content bullet list styled as green circular-arrow action links */
+main > .section:nth-child(3) ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 16px 0;
+}
+
+main > .section:nth-child(3) ul > li {
+  position: relative;
+  padding: 4px 0 4px 32px;
+  margin-bottom: 8px;
+}
+
+main > .section:nth-child(3) ul > li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 2px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background-color: #007f3b;
+}
+
+main > .section:nth-child(3) ul > li::after {
+  content: '';
+  position: absolute;
+  left: 7px;
+  top: 9px;
+  width: 8px;
+  height: 8px;
+  border-top: 2px solid white;
+  border-right: 2px solid white;
+  transform: rotate(45deg);
+}
+
+/* NHS services: default-content bullet list styled as solid blue button rows */
+main > .section:nth-child(4) ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 16px 0;
+  max-width: 500px;
+}
+
+main > .section:nth-child(4) ul > li {
+  margin-bottom: 2px;
+}
+
+main > .section:nth-child(4) ul > li > a {
+  display: block;
+  position: relative;
+  background-color: #005eb8;
+  color: white;
+  text-decoration: none;
+  padding: 12px 40px 12px 24px;
+}
+
+main > .section:nth-child(4) ul > li > a:hover {
+  background-color: #003d78;
+  text-decoration: underline;
+}
+
+main > .section:nth-child(4) ul > li > a::after {
+  content: '';
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  width: 8px;
+  height: 8px;
+  border-top: 2px solid white;
+  border-right: 2px solid white;
+  transform: translateY(-50%) rotate(45deg);
+}
